@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
     "build:eleventy": "eleventy",
-    "build:webpack": "webpack",
-    "clean": "clean-dir ./dist",
+    "build:css": "postcss src/styles/main.css -o dist/index.css --env production",
+    "clean": "cleandir ./dist",
     "dev": "npm-run-all clean -p build:* -p dev:*",
     "dev:eleventy": "eleventy --serve --quiet",
-    "dev:webpack": "webpack --watch"
+    "dev:css": "postcss src/styles/main.css -o dist/index.css"
   },
   "prettier": {
     "semi": false,
@@ -27,8 +27,16 @@
     "@11ty/eleventy": "^0.12.1",
     "autoprefixer": "^10.2.5",
     "clean-dir": "^1.0.3",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.1",
+    "mini-css-extract-plugin": "^1.3.3",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.2.10",
+    "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.1",
-    "tailwindcss": "^2.1.1"
+    "postcss-loader": "^4.1.0",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.0.2",
+    "tailwindcss-debug-screens": "^2.0.0"
   }
 }

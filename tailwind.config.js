@@ -1,10 +1,10 @@
 // tailwind.config.js
 module.exports = {
-  purge: [],
+  purge: ['./**/*.html', './**/*.njk'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
   },
   variants: {},
   plugins: [],
-};
+}
