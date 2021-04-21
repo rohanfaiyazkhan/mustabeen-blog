@@ -1,5 +1,9 @@
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
+
 module.exports = (config) => {
   config.addPassthroughCopy('styles')
+  config.addPassthroughCopy('img')
+  config.addPlugin(eleventyNavigationPlugin)
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],
     open: true,

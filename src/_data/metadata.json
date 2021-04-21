@@ -1,0 +1,21 @@
+{
+  "title": "Rohan Faiyaz Khan",
+  "url": "https://rohanfaiyaz.com/",
+  "language": "en",
+  "description": "Developer cat. AI Apocalypse prevention enthusiast.",
+  "feed": {
+    "subtitle": "Developer cat. AI Apocalypse prevention enthusiast.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://rohanfaiyaz.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://rohanfaiyaz.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Rohan Faiyaz Khan",
+    "email": "rohankhan170@gmail.com",
+    "url": "https://rohanfaiyaz.com/about-me/"
+  }
+}

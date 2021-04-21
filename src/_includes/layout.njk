@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/index.css">
-  <title>{{ title }} | TEA Stack</title>
-  {% block head %}{% endblock %}
-</head>
-<body class="{{ 'debug-screens' if env.devMode }}">
-  {% include 'header.njk' %}
-  {% block body %}
-    <div class="container py-8">
-      {{ content | safe }}
-    </div>
-  {% endblock %}
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>{{ title }}</title>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% include 'header.njk' %}
+    {% block body %}
+      <div class="container">
+        {{ content | safe }}
+      </div>
+    {% endblock %}
+  </body>
 </html>

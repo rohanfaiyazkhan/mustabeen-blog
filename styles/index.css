@@ -1,1 +1,69 @@
+:root {
+  --primary-default: hsla(330, 72%, 55%, 1);
+  --primary-dark: #a81887;
+  --primary-light: hsla(330, 53%, 73%, 1);
+  --secondary-dark: hsla(30, 70%, 56%, 1);
+  --secondary-default: hsla(53, 70%, 56%, 1);
+  --secondary-light: hsla(53, 70%, 76%, 1);
+  --gray-100: #f3f4f6;
+  --gray-300: #d1d5db;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+  --font-heading: 'Josefin Sans', sans-serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
 
+body {
+  background: var(--primary-dark);
+  font-family: var(--font-sans);
+  color: var(--gray-300);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.container {
+  --p-x: 2rem;
+  --p-y: 2rem;
+  --max-w: 1024px;
+  width: 100vw;
+  max-width: var(--max-w);
+  padding: var(--p-y) var(--p-x);
+  margin: 0 auto;
+}
+
+.heroine {
+  display: flex;
+  align-items: center;
+}
+
+.heroine picture {
+}
+
+@media (min-width: 1024px) {
+  .heroine picture {
+    display: block;
+    margin-right: 4rem;
+  }
+}
+
+.heroine img {
+  clip-path: url(#heroine-clip-path);
+  width: 342px;
+  height: 342px;
+  object-fit: cover;
+  object-position: 10px 0;
+}
+
+h1 {
+  color: var(--gray-300);
+  font-size: 2rem;
+}
+
+small.pronouns {
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  color: var(--primary-light);
+  vertical-align: top;
+}
