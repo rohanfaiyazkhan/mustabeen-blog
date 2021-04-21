@@ -3,6 +3,10 @@
   "url": "https://rohanfaiyaz.com/",
   "language": "en",
   "description": "Developer cat. AI Apocalypse prevention enthusiast.",
+  "social": {
+    "github": "https://github.com/rohanfaiyazkhan",
+    "twitter": "https://twitter.com/rohanfaiyaz"
+  },
   "feed": {
     "subtitle": "Developer cat. AI Apocalypse prevention enthusiast.",
     "filename": "feed.xml",

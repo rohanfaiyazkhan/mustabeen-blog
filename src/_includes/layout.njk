@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans&display=swap" rel="stylesheet">
-    <title>{{ title }}</title>
+    <title>{{ title or metadata.title }}</title>
     {% block head %}{% endblock %}
   </head>
   <body>
