@@ -3,29 +3,11 @@ eleventyNavigation:
   key: Home
   order: 1
 ```
-{% extends "layout.njk" %}
+{% extends "landing.njk" %}
 
-{% block body %}
-  <main class="container">
-    <section class="heroine">
-      <svg width="0" height="0" viewBox="0 0 373 376" fill="none">
-        <defs>
-          <clipPath id="heroine-clip-path">
-            <rect x="166.17" y="43" width="235" height="235" rx="1" transform="rotate(45 166.17 43)" fill="currentColor"/>
-            <rect x="206.339" width="235" height="44.3194" rx="1" transform="rotate(45 206.339 0)" fill="currentColor"/>
-          </clipPath>
-        </defs>
-      </svg>
-      <picture>
-        <img src="img/rohan-3.jpg" alt="Picture of Rohan Faiyaz Khan" class="heroine__img"/>
-      </picture>
-      <div>
-        <h1 class="font-heading">Hi, my name is Rohan<small class="pronouns"> (they/them) </small>
-        </h1>
-        <p>I am a Bangladeshi Frontend Web Developer and soon-to-be Masters student at Queen’s University in Canada. I love web technology and learning new things. and I wish to help create an accessible web for everyone.</p>
-        <p>In research I am facsinated by AI but am very skeptic of usage of technology without understanding its ethical ramifications. I wish to delve into the ethics of AI and help create a sustainable ecosystem of accessible knowledge on the risks of using AI in our systems.</p>
-        {% include "social-icons.njk" %}
-      </div>
-    </section>
-  </main>
+{% block heroine %}
+  <h1 class="font-heading">Hi, my name is Rohan<small class="pronouns"> (they/them) </small>
+  </h1>
+  <p>I am a Bangladeshi Frontend Web Developer and soon-to-be Masters student at Queen’s University in Canada. I love web technology and learning new things. and I wish to help create an accessible web for everyone.</p>
+  <p>In research I am facsinated by AI but am very skeptic of usage of technology without understanding its ethical ramifications. I wish to delve into the ethics of AI and help create a sustainable ecosystem of accessible knowledge on the risks of using AI in our systems.</p>
 {% endblock %}
