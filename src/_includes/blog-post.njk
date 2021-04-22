@@ -1,0 +1,8 @@
+{% extends "layout.njk" %}
+
+{% block body %}
+    <main class="container">
+        <h1>{{articleTitle or title}}</h1>
+        {{content | safe}}
+    </main>
+{% endblock %}
