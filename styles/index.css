@@ -2,8 +2,8 @@
   --primary-default: hsla(330, 72%, 55%, 1);
   --primary-dark: #a81887;
   --primary-light: hsla(330, 53%, 73%, 1);
-  --secondary-dark: hsla(30, 70%, 56%, 1);
-  --secondary-default: hsla(53, 70%, 56%, 1);
+  --secondary-dark: hsla(53, 70%, 76%, 1);
+  --secondary-default: #f0a61d;
   --secondary-light: hsla(53, 70%, 76%, 1);
   --gray-100: #f3f4f6;
   --gray-300: #d1d5db;
@@ -89,4 +89,25 @@ small.pronouns {
 
 .social-icon:hover {
   color: var(--primary-light);
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-home {
+  width: 3rem;
+  height: 3rem;
+  flex-grow: 1;
+}
+
+.nav-home > a {
+  color: var(--secondary-dark);
+  transition: color 0.25s linear;
+}
+
+.nav-home > a:hover {
+  color: var(--secondary-light);
 }
