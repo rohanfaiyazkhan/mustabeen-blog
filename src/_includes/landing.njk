@@ -3,14 +3,7 @@
 {% block body %}
     <main class="container">
         <section class="heroine">
-            <svg width="0" height="0" viewBox="0 0 373 376" fill="none">
-                <defs>
-                    <clipPath id="heroine-clip-path">
-                        <rect x="166.17" y="43" width="235" height="235" rx="1" transform="rotate(45 166.17 43)" fill="currentColor"/>
-                        <rect x="206.339" width="235" height="44.3194" rx="1" transform="rotate(45 206.339 0)" fill="currentColor"/>
-                    </clipPath>
-                </defs>
-            </svg>
+            {% include "clip-path.svg" %}
             <picture>
                 <img src="img/rohan-3.jpg" alt="Picture of Rohan Faiyaz Khan" class="heroine__img"/>
             </picture>

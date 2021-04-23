@@ -11,6 +11,8 @@
   --gray-700: #374151;
   --font-heading: 'Josefin Sans', sans-serif;
   --font-sans: 'Noto Sans', sans-serif;
+  --text-hover: hsla(330, 100%, 94%, 1);
+  --text-focus: hsla(330, 100%, 88%, 1);
 }
 
 body {
@@ -25,35 +27,81 @@ body {
 
 .container {
   --p-x: 2rem;
-  --p-y: 2rem;
+  --p-y: 0.25rem;
   --max-w: 1024px;
-  width: 100vw;
   max-width: var(--max-w);
   padding: var(--p-y) var(--p-x);
   margin: 0 auto;
 }
 
-.heroine {
+.blog-post {
+  --grid-cols: 324px auto;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
-.heroine picture {
+.blog-post > header {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-heading);
+}
+
+.blog-post > header h1 {
+  line-height: 1;
+}
+
+.blog-post > header > * {
+  margin: 0 0 1rem;
+}
+
+.blog-post > header img {
+  border-radius: 50%;
+  object-fit: cover;
+  --size: 270px;
+  width: var(--size);
+  height: var(--size);
 }
 
 @media (min-width: 1024px) {
+  .blog-post {
+    display: grid;
+    grid-template-columns: var(--grid-cols);
+    column-gap: 2rem;
+  }
+}
+
+.heroine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroine img {
+  clip-path: url(#clip-path);
+  --size: 342px;
+  width: var(--size);
+  height: var(--size);
+  object-fit: cover;
+  object-position: 10px 0;
+}
+
+.heroine h1 {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .heroine {
+    flex-direction: row;
+  }
+
   .heroine picture {
     display: block;
     margin-right: 4rem;
   }
-}
 
-.heroine img {
-  clip-path: url(#heroine-clip-path);
-  width: 342px;
-  height: 342px;
-  object-fit: cover;
-  object-position: 10px 0;
+  .heroine h1 {
+    text-align: left;
+  }
 }
 
 h1 {
@@ -70,7 +118,7 @@ small.pronouns {
 
 .social-icon-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0.5rem 0;
   flex-wrap: wrap;
 }
@@ -89,6 +137,12 @@ small.pronouns {
 
 .social-icon:hover {
   color: var(--primary-light);
+}
+
+@media (min-width: 1024px) {
+  .social-icon-container {
+    justify-content: flex-start;
+  }
 }
 
 nav > ul {
@@ -178,6 +232,15 @@ code .highlight-line-remove {
 a {
   color: var(--primary-light);
   text-decoration: none;
+  transition: color 0.2s linear;
+}
+
+a:focus {
+  color: var(--text-focus);
+}
+
+a:hover {
+  color: var(--text-hover);
 }
 
 a.direct-link {

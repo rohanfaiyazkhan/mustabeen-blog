@@ -1,7 +1,18 @@
 {% extends "layout.njk" %}
 
 {% block body %}
-    <main class="container">
-        {{content | safe}}
-    </main>
+    <section class="container blog-post">
+        <header>
+            {% if header_img and header_img_alt %}
+                <picture>
+                    <img src="{{header_img}}" alt="{{header_img_alt}}"/>
+                </picture>
+            {% endif %}
+            <h1>{{title}}</h1>
+            <p>{{ author }}<br/>{{ date | readableDate }}</p>
+        </header>
+        <main>
+            {{content | safe}}
+        </main>
+    </section>
 {% endblock %}

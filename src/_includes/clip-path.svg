@@ -1,0 +1,45 @@
+<svg
+
+   xmlns="http://www.w3.org/2000/svg"
+   width="0"
+   height="0"
+   viewBox="0 0 401.46741 364.19818"
+   fill="none"
+   version="1.1"
+>
+    <defs>
+        <clipPath id="clip-path">
+
+                <rect
+                x="148.65205"
+                width="229.98273"
+                height="43.373177"
+                rx="0.97864991"
+                transform="matrix(0.70303253,0.71115769,-0.70303253,0.71115769,0,0)"
+                fill="currentColor"
+                id="rect4"
+                y="-144.31525"
+                style="stroke-width:0.97865" />
+                <rect
+                style="fill:#000000;fill-opacity:1;stroke:#d7f0e8;stroke-width:0.466371"
+                id="rect837"
+                width="230.02499"
+                height="229.50925"
+                x="147.90552"
+                y="-87.094345"
+                rx="1.1659268"
+                transform="rotate(45)" />
+                <rect
+                x="-141.96252"
+                width="229.45056"
+                height="43.272812"
+                rx="0.97638535"
+                transform="matrix(0.70629191,-0.70792071,0.70629191,0.70792071,0,0)"
+                fill="currentColor"
+                id="rect4-3"
+                y="92.943497"
+                style="stroke-width:0.976385" />
+            
+        </clipPath>
+    </defs>
+</svg>

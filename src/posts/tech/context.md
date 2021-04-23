@@ -3,6 +3,8 @@ layout: 'blog-post.njk'
 title: "Sharing more with React's Context API"
 date: 2019-09-14
 share_img: '/img/bicycle.jpg'
+header_img: '/img/bicycle.jpg'
+header_img_alt: 'picture of a bicycle'
 author: 'Rohan Faiyaz Khan'
 tags: [react, context, state]
 permalink: '/posts/{{ page.fileSlug }}/index.html'

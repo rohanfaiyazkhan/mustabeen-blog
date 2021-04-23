@@ -2,6 +2,7 @@ const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
+const { DateTime } = require('luxon')
 
 function extractExcerpt(article) {
   if (!article.hasOwnProperty('templateContent')) {
@@ -57,6 +58,20 @@ module.exports = (config) => {
     },
   })
   config.setDataDeepMerge(true)
+
+  config.addFilter('readableDate', (dateObj) => {
+    console.debug(dateObj, typeof dateObj)
+    if (dateObj) {
+      const date = DateTime.fromJSDate(dateObj).toFormat('dd LLL yyyy')
+      console.debug(date)
+      return date
+    }
+  })
+
+  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+  config.addFilter('htmlDateString', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd')
+  })
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
