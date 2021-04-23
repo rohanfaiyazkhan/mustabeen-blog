@@ -12,5 +12,17 @@
                 {% include "social-icons.njk" %}
             </div>
         </section>
+        <section class="home-posts">
+            <div class="research-posts">
+                <h3>Latest research articles</h3>
+                {% set postslist = collections.research %}
+                {% include "postslist.njk" %}
+            </div>
+            <div class="tech-posts">
+                <h3>Latest tech tutorials</h3>
+                {% set postslist = collections.tech %}
+                {% include "postslist.njk" %}
+            </div>
+        </section>
     </main>
 {% endblock %}

@@ -60,10 +60,9 @@ module.exports = (config) => {
   config.setDataDeepMerge(true)
 
   config.addFilter('readableDate', (dateObj) => {
-    console.debug(dateObj, typeof dateObj)
     if (dateObj) {
       const date = DateTime.fromJSDate(dateObj).toFormat('dd LLL yyyy')
-      console.debug(date)
+
       return date
     }
   })

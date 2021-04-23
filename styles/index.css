@@ -19,6 +19,7 @@ body {
   background: var(--primary-dark);
   font-family: var(--font-sans);
   color: var(--gray-300);
+  font-size: 18px;
 }
 
 .font-heading {
@@ -71,9 +72,12 @@ body {
 }
 
 .heroine {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--secondary-default);
 }
 
 .heroine img {
@@ -87,6 +91,38 @@ body {
 
 .heroine h1 {
   text-align: center;
+}
+
+.home-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-posts > div {
+  margin-top: 1rem;
+}
+
+.research-posts {
+  border-bottom: 1px solid var(--primary-light);
+}
+
+@media (min-width: 768px) {
+  .home-posts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .research-posts {
+    margin-top: 2rem;
+    padding-right: 2rem;
+    border-bottom: none;
+    border-right: 1px solid var(--primary-light);
+  }
+
+  .tech-posts {
+    margin-top: 2rem;
+    padding-left: 2rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -155,6 +191,7 @@ nav > ul {
   width: 3rem;
   height: 3rem;
   flex-grow: 1;
+  font-size: 16px;
 }
 
 .nav-home > a {
