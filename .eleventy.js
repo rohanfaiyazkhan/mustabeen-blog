@@ -1,4 +1,7 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
+const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const markdownIt = require('markdown-it')
+const markdownItAnchor = require('markdown-it-anchor')
 
 function extractExcerpt(article) {
   if (!article.hasOwnProperty('templateContent')) {
@@ -33,9 +36,12 @@ function extractExcerpt(article) {
 }
 
 module.exports = (config) => {
+  config.addPlugin(eleventyNavigationPlugin)
+  config.addPlugin(pluginSyntaxHighlight)
+
   config.addPassthroughCopy('styles')
   config.addPassthroughCopy('img')
-  config.addPlugin(eleventyNavigationPlugin)
+
   config.addShortcode('excerpt', (article) => extractExcerpt(article))
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],
@@ -52,7 +58,27 @@ module.exports = (config) => {
   })
   config.setDataDeepMerge(true)
 
+  // Customize Markdown library and settings:
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+  }).use(markdownItAnchor, {
+    permalink: true,
+    permalinkClass: 'direct-link',
+    permalinkSymbol: '#',
+  })
+  config.setLibrary('md', markdownLibrary)
+
   return {
+    // Pre-process *.md files with: (default: `liquid`)
+    markdownTemplateEngine: 'njk',
+
+    // Pre-process *.html files with: (default: `liquid`)
+    htmlTemplateEngine: 'njk',
+
+    // Opt-out of pre-processing global data JSON files: (default: `liquid`)
+    dataTemplateEngine: false,
     dir: {
       input: 'src',
       output: 'dist',
