@@ -2,7 +2,10 @@
     {% for post in postslist | reverse %}
         <li>
             <a href={{post.url | url}}>{{post.data.title}}</a>
-            <p class="post-excerpt">{% excerpt post %}</p>
+            <small class="post-date">Written on {{post.date | readableDate}}</small>
+            {% set tags = post.data.tags %}
+            {% include "tagslist.njk" %}
+            <p class="post-excerpt">"{% excerpt post %}"</p>
         </li>
     {% endfor %}
 </ul>

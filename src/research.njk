@@ -1,0 +1,10 @@
+---
+title: Research Articles by Rohan Faiyaz Khan
+---
+{% include "layout.njk" %}
+<main class="container">
+    <h1>View all research articles
+    </h1>
+    {% set postslist = collections.research | head(-3) %}
+    {% include "postslist.njk" %}
+</main>

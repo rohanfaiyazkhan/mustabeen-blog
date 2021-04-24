@@ -111,6 +111,14 @@ body {
   font-size: 0.8em;
 }
 
+.post-date {
+  font-family: var(--font-heading);
+  font-size: 0.7em;
+  display: inline-block;
+  margin-left: 0.5em;
+  color: var(--gray-300);
+}
+
 @media (min-width: 768px) {
   .home-posts {
     display: grid;
@@ -307,4 +315,39 @@ main.blog-content a {
 a.direct-link {
   font-size: 0.8em;
   color: var(--gray-500);
+}
+
+.post-tag-list {
+  display: flex;
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.post-tag-list > * {
+  margin-right: 0.5rem;
+}
+
+.post-tag {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  color: var(--gray-300);
+  background: var(--gray-700);
+  transition: all 0.2s linear;
+}
+
+.post-tag:hover,
+.post-tag:focus {
+  background: var(--gray-500);
+}
+
+.post-tag.primary {
+  background: var(--primary-light);
+  color: var(--gray-700);
+}
+
+.post-tag.primary:hover,
+.post-tag.primary:focus {
+  background: var(--gray-100);
 }

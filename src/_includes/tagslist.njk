@@ -1,0 +1,20 @@
+{% set primaryTag = tags | findCategoryTag %}
+{% set otherTags = tags | filterTags %}
+{% if primaryTag or tags.length > 0 %}
+    <ul class="post-tag-list">
+        {% if primaryTag %}
+            <li>
+                <a class="post-tag primary" href="/{{primaryTag | slug}}">
+                    {{primaryTag | upper}}
+                </a>
+            </li>
+        {% endif %}
+        {% for tag in otherTags %}
+            <li>
+                <a class="post-tag" href="/tags/{{tag | slug}}">
+                    {{tag | upper}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

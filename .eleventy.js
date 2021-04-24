@@ -86,6 +86,22 @@ module.exports = (config) => {
     return Math.min.apply(null, numbers)
   })
 
+  config.addFilter('findCategoryTag', (tags) => {
+    if (!tags) return undefined
+
+    if (tags.includes('research')) return 'research'
+
+    if (tags.includes('tech')) return 'tech'
+
+    return undefined
+  })
+
+  config.addFilter('filterTags', (tags) => {
+    return (tags || []).filter(
+      (tag) => !['posts', 'research', 'tech'].includes(tag)
+    )
+  })
+
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,
