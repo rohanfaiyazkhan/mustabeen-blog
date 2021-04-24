@@ -72,6 +72,20 @@ module.exports = (config) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd')
   })
 
+  // Get the first `n` elements of a collection.
+  config.addFilter('head', (array, n) => {
+    if (n < 0) {
+      return array.slice(n)
+    }
+
+    return array.slice(0, n)
+  })
+
+  // Return the smallest number argument
+  config.addFilter('min', (...numbers) => {
+    return Math.min.apply(null, numbers)
+  })
+
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,

@@ -14,13 +14,17 @@
         </section>
         <section class="home-posts">
             <div class="research-posts">
-                <h3>Latest research articles</h3>
-                {% set postslist = collections.research %}
+                {% set maxPosts = collections.research.length | min(3) %}
+                <h3>Latest {% if maxPosts == 1 %}research article{% else %}{{maxPosts}} research articles{% endif %}
+                </h3>
+                {% set postslist = collections.research | head(-3) %}
                 {% include "postslist.njk" %}
             </div>
             <div class="tech-posts">
-                <h3>Latest tech tutorials</h3>
-                {% set postslist = collections.tech %}
+                {% set maxPosts = collections.research.length | min(3) %}
+                <h3>Latest {% if maxPosts == 1 %}tech article{% else %}{{maxPosts}} tech articles{% endif %}
+                </h3>
+                {% set postslist = collections.tech | head(-3) %}
                 {% include "postslist.njk" %}
             </div>
         </section>

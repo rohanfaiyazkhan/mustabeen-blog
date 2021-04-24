@@ -106,6 +106,11 @@ body {
   border-bottom: 1px solid var(--primary-light);
 }
 
+.post-excerpt {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
 @media (min-width: 768px) {
   .home-posts {
     display: grid;
@@ -185,6 +190,13 @@ nav > ul {
   display: flex;
   align-items: center;
   list-style: none;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+nav > ul a {
+  display: inline-block;
+  padding: 1rem;
 }
 
 .nav-home {
@@ -192,6 +204,7 @@ nav > ul {
   height: 3rem;
   flex-grow: 1;
   font-size: 16px;
+  font-family: var(--font-heading);
 }
 
 .nav-home > a {
@@ -283,10 +296,11 @@ a:hover {
 main.blog-content img {
   width: 100%;
   height: auto;
+  max-height: 300px;
   object-fit: contain;
 }
 
-main.block-content a {
+main.blog-content a {
   color: var(--secondary-default);
 }
 

@@ -1,7 +1,8 @@
-<ol>
-    {% for post in postslist %}
+<ul class="postlist">
+    {% for post in postslist | reverse %}
         <li>
             <a href={{post.url | url}}>{{post.data.title}}</a>
+            <p class="post-excerpt">{% excerpt post %}</p>
         </li>
     {% endfor %}
-</ol>
+</ul>

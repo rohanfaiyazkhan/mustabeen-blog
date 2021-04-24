@@ -9,7 +9,7 @@
                 </picture>
             {% endif %}
             <h1>{{title}}</h1>
-            <p>{{ author }}<br/>{{ date | readableDate }}</p>
+            <p>{{ author or metadata.author.name }}<br/>{{ date | readableDate }}</p>
         </header>
         <main class="blog-content">
             {{content | safe}}
