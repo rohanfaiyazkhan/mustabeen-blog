@@ -280,6 +280,17 @@ a:hover {
   color: var(--text-hover);
 }
 
+main.blog-content img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+main.block-content a {
+  color: var(--secondary-default);
+}
+
 a.direct-link {
   font-size: 0.8em;
+  color: var(--gray-500);
 }

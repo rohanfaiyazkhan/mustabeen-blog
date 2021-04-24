@@ -45,7 +45,7 @@ Redux also provides us with the action creator pattern, which is simply a way to
 
 While redux is great and I personally am a big fan of it, it has its fair share of detractors.
 
-- The first problem a lot of people have is that it is very boilerplate-y. This is especially apparent when you have an app that initially doesn't need global state, and then later on you realize you do and then \***_BOOM_**\* 200+ lines added in one commit. And every time global state has to be pulled in for a component, this extra boilerplate has to added in.
+- The first problem a lot of people have is that it is very boilerplate-y. This is especially apparent when you have an app that initially doesn't need global state, and then later on you realize you do and then \*_*BOOM*_\* 200+ lines added in one commit. And every time global state has to be pulled in for a component, this extra boilerplate has to added in.
 
 - Redux is opinionated and imposes limitations. Your state has to be represented as objects and arrays. Your logic for changing states have to be pure functions. These are limitations that most apps could do without.
 
@@ -67,7 +67,7 @@ But there was a roadblock to learning, that being the official React documentati
 
 ## Enough talk, show me how this works already
 
-All we will be doing is logging in (using a fake authentication method wrapped in a Promise), and changing the title with the username of the logged in user. **[ If you'd rather skip all the explanantion and just look at the code, feel free to do so. ] (https://github.com/rohanfaiyazkhan/react-context-api-example)**
+All we will be doing is logging in (using a fake authentication method wrapped in a Promise), and changing the title with the username of the logged in user. **[If you'd rather skip all the explanantion and just look at the code, feel free to do so.](https://github.com/rohanfaiyazkhan/react-context-api-example)**
 
 ![Gif showing Context Application](/img/context.gif)
 
