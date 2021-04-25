@@ -111,6 +111,8 @@ module.exports = (config) => {
     return new CleanCSS({}).minify(code).styles
   })
 
+  config.addShortcode('year', () => `${new Date().getFullYear()}`)
+
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,

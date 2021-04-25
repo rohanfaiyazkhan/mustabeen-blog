@@ -20,6 +20,14 @@ body {
   font-family: var(--font-sans);
   color: var(--gray-300);
   font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+body > main {
+  flex-grow: 1;
 }
 
 .font-heading {
@@ -237,4 +245,20 @@ main.blog-content a {
 a.direct-link {
   font-size: 0.8em;
   color: var(--gray-500);
+}
+
+footer {
+  font-size: 0.8rem;
+  color: var(--primary-light);
+  text-align: center;
+  font-family: var(--font-heading);
+  padding: 4em;
+}
+
+footer p {
+  margin: 0.2em 0;
+}
+
+footer a {
+  color: var(--gray-300);
 }

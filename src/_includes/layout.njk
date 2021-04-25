@@ -29,9 +29,10 @@
   <body>
     {% include 'header.njk' %}
     {% block body %}
-      <div class="container">
+      <main class="container">
         {{ content | safe }}
-      </div>
+      </main>
     {% endblock %}
+    {% include "footer.njk" %}
   </body>
 </html>
