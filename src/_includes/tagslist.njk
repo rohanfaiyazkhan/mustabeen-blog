@@ -5,7 +5,7 @@
         {% if primaryTag %}
             <li>
                 <a class="post-tag primary" href="/{{primaryTag | slug}}">
-                    {{primaryTag | upper}}
+                    {{primaryTag | showPrimaryTag}}
                 </a>
             </li>
         {% endif %}

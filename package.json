@@ -26,6 +26,7 @@
     "@11ty/eleventy-navigation": "^0.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
     "autoprefixer": "^10.2.5",
+    "clean-css": "^5.1.2",
     "clean-dir": "^1.0.3",
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.1",

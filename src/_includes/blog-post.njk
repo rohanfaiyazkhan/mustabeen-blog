@@ -1,4 +1,11 @@
 {% extends "layout.njk" %}
+{% set css %}
+{% include "blog-post.css" %}
+{% include "tagslist.css" %}
+{% endset %}
+<style>
+    {{css | cssmin | safe}}
+</style>
 
 {% block body %}
     <section class="container blog-post">

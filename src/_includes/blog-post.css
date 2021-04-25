@@ -1,0 +1,35 @@
+.blog-post {
+  --grid-cols: 324px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post > header {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-heading);
+}
+
+.blog-post > header h1 {
+  line-height: 1;
+}
+
+.blog-post > header > * {
+  margin: 0 0 1rem;
+}
+
+.blog-post > header img {
+  border-radius: 50%;
+  object-fit: cover;
+  --size: 270px;
+  width: var(--size);
+  height: var(--size);
+}
+
+@media (min-width: 1024px) {
+  .blog-post {
+    display: grid;
+    grid-template-columns: var(--grid-cols);
+    column-gap: 2rem;
+  }
+}

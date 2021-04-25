@@ -3,6 +3,7 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const { DateTime } = require('luxon')
+const CleanCSS = require('clean-css')
 
 function extractExcerpt(article) {
   if (!article.hasOwnProperty('templateContent')) {
@@ -100,6 +101,14 @@ module.exports = (config) => {
     return (tags || []).filter(
       (tag) => !['posts', 'research', 'tech'].includes(tag)
     )
+  })
+
+  config.addFilter('showPrimaryTag', (tag) => {
+    return tag === 'research' ? 'ACADEMIC' : 'WEB DEV'
+  })
+
+  config.addFilter('cssmin', function (code) {
+    return new CleanCSS({}).minify(code).styles
   })
 
   // Customize Markdown library and settings:

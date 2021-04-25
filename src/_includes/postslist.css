@@ -1,0 +1,12 @@
+.post-excerpt {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.post-date {
+  font-family: var(--font-heading);
+  font-size: 0.7em;
+  display: inline-block;
+  margin-left: 0.5em;
+  color: var(--gray-300);
+}

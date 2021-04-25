@@ -1,8 +1,16 @@
+{% set css %}
+{% include "postslist.css" %}
+{% include "tagslist.css" %}
+{% endset %}
+<style>
+    {{css | cssmin | safe}}
+</style>
+
 <ul class="postlist">
     {% for post in postslist | reverse %}
         <li>
             <a href={{post.url | url}}>{{post.data.title}}</a>
-            <small class="post-date">Written on {{post.date | readableDate}}</small>
+            <p class="post-date">Written on {{post.date | readableDate}}</p>
             {% set tags = post.data.tags %}
             {% include "tagslist.njk" %}
             <p class="post-excerpt">"{% excerpt post %}"</p>
