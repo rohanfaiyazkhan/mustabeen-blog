@@ -1,10 +1,11 @@
 ---
 title: Research Articles by Rohan Faiyaz Khan
+layout: layout.njk
 eleventyNavigation:
   key: 'Research'
 ---
-{% include "layout.njk" %}
-<main class="container">
+
+<main class="container small">
     <h1>View all academic articles
     </h1>
     {% set postslist = collections.research | head(-3) %}

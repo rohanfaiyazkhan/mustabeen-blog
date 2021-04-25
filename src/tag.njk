@@ -1,0 +1,22 @@
+---
+pagination:
+  data: collections
+  alias: tag
+  size: 1
+  filter:
+    - all
+    - posts
+    - tech
+    - research
+eleventyComputed:
+  title: Articles Tagged “{{ tag }}” | Rohan Faiyaz Khan
+permalink: /tags/{{ tag | slug }}/
+layout: layout.njk
+---
+
+<main class="container small">
+    <h1>Tagged “{{ tag }}”</h1>
+
+    {% set postslist = collections[tag] %}
+    {% include "postslist.njk" %}
+</main>

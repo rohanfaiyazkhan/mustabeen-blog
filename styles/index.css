@@ -35,6 +35,10 @@ body {
   margin: 0 auto;
 }
 
+.container.small {
+  --max-w: 768px;
+}
+
 .heroine {
   position: relative;
   display: flex;
@@ -175,6 +179,10 @@ nav > ul a {
 
 .nav-home > a:hover {
   color: var(--secondary-light);
+}
+
+.nav-item-active > a {
+  color: var(--gray-300);
 }
 
 pre,
