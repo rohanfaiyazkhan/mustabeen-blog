@@ -1,8 +1,14 @@
 {% extends "layout.njk" %}
 
 {% block body %}
+    {% set css %}
+    {% include "heroine.css" %}
+    {% endset %}
+    <style>
+        {{css | cssmin | safe}}
+    </style>
     <main class="container">
-        <section class="heroine">
+        <section class="heroine golden-bottom">
             {% include "clip-path.svg" %}
             <picture>
                 <img src="img/rohan-3.jpg" alt="Picture of Rohan Faiyaz Khan" class="heroine__img"/>

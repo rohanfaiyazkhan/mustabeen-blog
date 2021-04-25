@@ -1,10 +1,12 @@
 ---
-title: About
-layout: layout.njk
+title: About Me | Rohan Faiyaz Khan
+layout: image-layout.njk
 eleventyNavigation:
   key: 'About'
 ---
 
-<!-- This page is written in markdown! -->
+{% include "social-icons.njk" %}
 
-# This is the {{ title }} page.
+# About me
+
+Hi, my name is Rohan.

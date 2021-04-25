@@ -120,6 +120,7 @@ module.exports = (config) => {
     permalink: true,
     permalinkClass: 'direct-link',
     permalinkSymbol: '#',
+    level: 2,
   })
   config.setLibrary('md', markdownLibrary)
 

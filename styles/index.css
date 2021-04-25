@@ -39,28 +39,6 @@ body {
   --max-w: 768px;
 }
 
-.heroine {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 2rem;
-  border-bottom: 2px solid var(--secondary-default);
-}
-
-.heroine img {
-  clip-path: url(#clip-path);
-  --size: 342px;
-  width: var(--size);
-  height: var(--size);
-  object-fit: cover;
-  object-position: 10px 0;
-}
-
-.heroine h1 {
-  text-align: center;
-}
-
 .home-posts {
   display: flex;
   flex-direction: column;
@@ -90,21 +68,6 @@ body {
   .tech-posts {
     margin-top: 2rem;
     padding-left: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .heroine {
-    flex-direction: row;
-  }
-
-  .heroine picture {
-    display: block;
-    margin-right: 4rem;
-  }
-
-  .heroine h1 {
-    text-align: left;
   }
 }
 
