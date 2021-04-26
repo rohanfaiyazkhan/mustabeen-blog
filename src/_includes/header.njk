@@ -1,7 +1,21 @@
+{% set css %}
+{% include "nav.css" %}
+{% endset %}
+<style>
+  {{css | cssmin | safe}}
+</style>
+
+{% set js %}
+{% include "nav.js" %}
+{% endset %}
+<script defer>
+  {{ js | jsmin | safe }}
+</script>
+
 <nav>
-  <ul>
+  <ul  role="menu">
     <li class="nav-home">
-      <a href="/" title="Home">
+      <a href="/" title="Rohan" role="menuitem">
         <span>
           {% include "rohan-logo.njk" %}
         </span>
@@ -11,13 +25,31 @@
       </a>
     </li>
     {% for entry in collections.all | eleventyNavigation %}
-      <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+      <li class="nav-desktop nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
         <a
           href="{{ entry.url | url }}"
+          role="menuitem"
         >
           {{ entry.title }}
         </a>
       </li>
     {% endfor %}
+    <div class="dropdown nav-mobile">
+      <button class="nav-dropdown-button" id="dropdown-btn" aria-expanded="false">
+      Menu
+    </button>
+      <div class="dropdown-menu" id="dropdown-menu">
+        {% for entry in collections.all | eleventyNavigation %}
+          <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+            <a
+          href="{{ entry.url | url }}"
+          role="menuitem"
+        >
+              {{ entry.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </div>
+    </div>
   </ul>
 </nav>

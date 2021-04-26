@@ -120,42 +120,6 @@ small.pronouns {
   }
 }
 
-nav > ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0 1rem;
-}
-
-nav > ul a {
-  display: inline-block;
-  padding: 1rem;
-}
-
-.nav-home {
-  width: 3rem;
-  height: 3rem;
-  flex-grow: 1;
-  font-size: 16px;
-  font-family: var(--font-heading);
-}
-
-.nav-home > a {
-  color: var(--secondary-dark);
-  transition: color 0.25s linear;
-  display: flex;
-  align-items: center;
-}
-
-.nav-home > a:hover {
-  color: var(--secondary-light);
-}
-
-.nav-item-active > a {
-  color: var(--gray-300);
-}
-
 pre,
 code {
   font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',

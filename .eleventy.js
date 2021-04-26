@@ -4,6 +4,7 @@ const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const { DateTime } = require('luxon')
 const CleanCSS = require('clean-css')
+const { minify } = require('terser')
 
 function extractExcerpt(article) {
   if (!article.hasOwnProperty('templateContent')) {
@@ -112,6 +113,17 @@ module.exports = (config) => {
   })
 
   config.addShortcode('year', () => `${new Date().getFullYear()}`)
+
+  config.addNunjucksAsyncFilter('jsmin', async function (code, callback) {
+    try {
+      const minified = await minify(code)
+      callback(null, minified.code)
+    } catch (err) {
+      console.error('Terser error: ', err)
+      // Fail gracefully.
+      callback(null, code)
+    }
+  })
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
