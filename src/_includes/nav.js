@@ -14,7 +14,6 @@ window.addEventListener('load', () => {
 })
 
 function openDropDown(element) {
-  //   console.debug('Opening')
   element.classList.add('visible')
   element.setAttribute('aria-expanded', 'true')
 
@@ -24,7 +23,6 @@ function openDropDown(element) {
 }
 
 function closeDropDown(element) {
-  //   console.debug('Closing')
   element.classList.remove('visible')
   element.classList.add('false')
   element.setAttribute('aria-expanded', 'false')
@@ -37,7 +35,6 @@ function isVisible(element) {
 function hideOnClickOutside(element) {
   const outsideClickListener = (event) => {
     const isClickInside = element.contains(event.target)
-    // console.debug('Clicked on document', { isClickInside })
     if (!isClickInside) {
       closeDropDown(element)
       removeClickListener()

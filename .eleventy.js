@@ -5,6 +5,7 @@ const markdownItAnchor = require('markdown-it-anchor')
 const { DateTime } = require('luxon')
 const CleanCSS = require('clean-css')
 const { minify } = require('terser')
+const markdownEmoji = require('markdown-it-emoji')
 
 function extractExcerpt(article) {
   if (!article.hasOwnProperty('templateContent')) {
@@ -130,12 +131,14 @@ module.exports = (config) => {
     html: true,
     breaks: true,
     linkify: true,
-  }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkClass: 'direct-link',
-    permalinkSymbol: '#',
-    level: 2,
   })
+    .use(markdownItAnchor, {
+      permalink: true,
+      permalinkClass: 'direct-link',
+      permalinkSymbol: '#',
+      level: 2,
+    })
+    .use(markdownEmoji)
   config.setLibrary('md', markdownLibrary)
 
   return {
