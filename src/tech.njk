@@ -1,12 +1,12 @@
 ---
 title: Web Dev Articles by Rohan Faiyaz Khan
-layout: layout.njk
+layout: base
 eleventyNavigation:
   key: 'Web Dev'
 ---
 <main class="small container">
-    <h1>View all web development articles
+  <h1>View all web development articles
     </h1>
-    {% set postslist = collections.tech | head(-3) %}
-    {% include "postslist.njk" %}
+  {% set postslist = collections.tech | head(-3) %}
+  {% include "components/postslist/postslist.njk" %}
 </main>

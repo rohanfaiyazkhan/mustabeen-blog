@@ -1,11 +1,11 @@
 ---
 title: About Me | Rohan Faiyaz Khan
-layout: image-layout.njk
+layout: about
 eleventyNavigation:
   key: 'About'
 ---
 
-{% include "social-icons.njk" %}
+{% include "components/social-icons/social-icons.njk" %}
 
 # About me
 

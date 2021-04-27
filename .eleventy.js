@@ -106,7 +106,7 @@ module.exports = (config) => {
 
   // Return the smallest number argument
   config.addFilter('min', (...numbers) => {
-    return Math.min.apply(null, numbers)
+    return Math.min(...numbers)
   })
 
   config.addFilter('findCategoryTag', (tags) => {
@@ -126,7 +126,7 @@ module.exports = (config) => {
   })
 
   config.addFilter('showPrimaryTag', (tag) => {
-    return tag === 'research' ? 'ACADEMIC' : 'WEB DEV'
+    return tag === 'research' ? 'ACADEMIC' : 'DEV'
   })
 
   config.addFilter('cssmin', function (code) {
@@ -145,6 +145,12 @@ module.exports = (config) => {
       callback(null, code)
     }
   })
+
+  config.addLayoutAlias('post', 'layouts/post.njk')
+  config.addLayoutAlias('about', 'layouts/image-layout.njk')
+  config.addLayoutAlias('base', 'layouts/base.njk')
+  config.addLayoutAlias('blog', 'components/blog-post/blog-post.njk')
+  config.addLayoutAlias('landing', 'layouts/landing.njk')
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({

@@ -1,10 +1,10 @@
-{% extends "layout.njk" %}
+{% extends "layouts/base.njk" %}
 
 {% block body %}
 
     {% set css %}
-    {% include "blog-post.css" %}
-    {% include "tagslist.css" %}
+    {% include "./blog-post.css" %}
+    {% include "../tagslist/tagslist.css" %}
     {% endset %}
     <style>
         {{css | cssmin | safe}}
@@ -18,7 +18,7 @@
             {% endif %}
             <h1>{{title}}</h1>
             <p>{{ author or metadata.author.name }}<br/>{{ date | readableDate }}</p>
-            {% include "tagslist.njk" %}
+            {% include "components/tagslist/tagslist.njk" %}
         </header>
         <main class="blog-content">
             {{content | safe}}

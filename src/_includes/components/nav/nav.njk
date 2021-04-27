@@ -1,12 +1,12 @@
 {% set css %}
-{% include "nav.css" %}
+{% include "./nav.css" %}
 {% endset %}
 <style>
   {{css | cssmin |  safe}}
 </style>
 
 {% set js %}
-{% include "nav.js" %}
+{% include "./nav.js" %}
 {% endset %}
 <script defer>
   {{ js | jsmin | safe }}

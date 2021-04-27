@@ -1,4 +1,4 @@
 {
   "tags": ["posts", "tech"],
-  "layout": "blog-post.njk"
+  "layout": "blog"
 }

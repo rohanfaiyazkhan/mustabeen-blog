@@ -1,5 +1,5 @@
 ---
-layout: blog-post.njk
+layout: blog
 title: This Is a Test Post
 date: 2021-04-22
 permalink: '/posts/{{ page.fileSlug }}/index.html'

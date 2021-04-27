@@ -1,6 +1,6 @@
 {% set css %}
-{% include "postslist.css" %}
-{% include "tagslist.css" %}
+{% include "./postslist.css" %}
+{% include "../tagslist/tagslist.css" %}
 {% endset %}
 <style>
     {{css | cssmin | safe}}
@@ -12,7 +12,7 @@
             <a href={{post.url | url}}>{{post.data.title}}</a>
             <p class="post-date">Written on {{post.date | readableDate}}</p>
             {% set tags = post.data.tags %}
-            {% include "tagslist.njk" %}
+            {% include "components/tagslist/tagslist.njk" %}
             <p class="post-excerpt">"{% excerpt post %}"</p>
         </li>
     {% endfor %}

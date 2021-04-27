@@ -1,5 +1,5 @@
 ---
-layout: 'blog-post.njk'
+layout: 'blog'
 title: "Sharing more with React's Context API"
 date: 2019-09-14
 share_img: '/img/bicycle.jpg'

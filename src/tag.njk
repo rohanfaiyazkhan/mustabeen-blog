@@ -11,12 +11,12 @@ pagination:
 eleventyComputed:
   title: Articles Tagged “{{ tag }}” | Rohan Faiyaz Khan
 permalink: /tags/{{ tag | slug }}/
-layout: layout.njk
+layout: base
 ---
 
 <main class="container small">
-    <h1>Tagged “{{ tag }}”</h1>
+  <h1>Tagged “{{ tag }}”</h1>
 
-    {% set postslist = collections[tag] %}
-    {% include "postslist.njk" %}
+  {% set postslist = collections[tag] %}
+  {% include "components/postslist/postslist.njk" %}
 </main>

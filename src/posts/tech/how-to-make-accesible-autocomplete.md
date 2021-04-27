@@ -4,7 +4,7 @@ author: 'Rohan Faiyaz Khan'
 share_img: '/img/google-search.png'
 header_img: '/img/google-search.png'
 header_img_alt: 'picture of google search'
-layout: 'blog-post.njk'
+layout: 'blog'
 date: 2020-05-16T20:52:30+06:00
 tags: ['autosuggest', 'combobox', 'a11y', 'javascript']
 ---

@@ -1,0 +1,40 @@
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+  {% set css %}
+  {% include "components/heroine/heroine.css" %}
+  {% endset %}
+  <style>
+    {{css | cssmin | safe}}
+  </style>
+  <main class="container">
+    <section class="heroine golden-bottom">
+      {% include "clip-path.svg" %}
+      <picture>
+        <img src="img/rohan-3.jpg" alt="Picture of Rohan Faiyaz Khan" class="heroine__img"/>
+      </picture>
+      <div>
+        {% block heroine %}{% endblock %}
+        {% include "components/social-icons/social-icons.njk" %}
+      </div>
+    </section>
+    <section class="home-posts">
+      <div class="research-posts">
+        {% set maxPosts = collections.research.length | min(3) %}
+        <h3>Latest {% if maxPosts == 1 %}research article{% else %}{{maxPosts}} research articles{% endif %}
+        </h3>
+        {% set postslist = collections.research | head(-3) %}
+        {% include "components/postslist/postslist.njk" %}
+        <a href="/research">View all academic articles</a>
+      </div>
+      <div class="tech-posts">
+        {% set maxPosts = collections.tech.length | min(3) %}
+        <h3>Latest {% if maxPosts == 1 %}tech article{% else %}{{maxPosts}} tech articles{% endif %}
+        </h3>
+        {% set postslist = collections.tech | head(-3) %}
+        {% include "components/postslist/postslist.njk" %}
+        <a href="/tech">View all development articles</a>
+      </div>
+    </section>
+  </main>
+{% endblock %}
