@@ -1,13 +1,13 @@
 {% extends "layout.njk" %}
-{% set css %}
-{% include "blog-post.css" %}
-{% include "tagslist.css" %}
-{% endset %}
-<style>
-    {{css | cssmin | safe}}
-</style>
 
 {% block body %}
+    {% set css %}
+    {% include "blog-post.css" %}
+    {% include "tagslist.css" %}
+    {% endset %}
+    <style>
+        {{css | cssmin | safe}}
+    </style>
     <section class="container blog-post">
         <header>
             {% if header_img and header_img_alt %}
@@ -17,6 +17,7 @@
             {% endif %}
             <h1>{{title}}</h1>
             <p>{{ author or metadata.author.name }}<br/>{{ date | readableDate }}</p>
+            {% include "tagslist.njk" %}
         </header>
         <main class="blog-content">
             {{content | safe}}

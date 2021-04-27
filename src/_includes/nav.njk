@@ -2,7 +2,7 @@
 {% include "nav.css" %}
 {% endset %}
 <style>
-  {{css |  safe}}
+  {{css | cssmin |  safe}}
 </style>
 
 {% set js %}

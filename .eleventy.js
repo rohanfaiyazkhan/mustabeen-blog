@@ -7,6 +7,23 @@ const CleanCSS = require('clean-css')
 const { minify } = require('terser')
 const markdownEmoji = require('markdown-it-emoji')
 
+/**
+ *
+ * @param {string} excerpt
+ */
+String.prototype.stripSurroundingParagraphTag = function () {
+  let output = this
+  if (this.startsWith('<p>')) {
+    output = output.slice(3)
+  }
+
+  if (this.endsWith('</p>')) {
+    output = output.slice(0, -4)
+  }
+
+  return output
+}
+
 function extractExcerpt(article) {
   if (!article.hasOwnProperty('templateContent')) {
     console.warn(
@@ -32,11 +49,13 @@ function extractExcerpt(article) {
       excerpt = content
         .substring(startPosition + separators.start.length, endPosition)
         .trim()
+        .stripSurroundingParagraphTag()
       return true // Exit out of array loop on first match
     }
   })
 
-  return excerpt
+  // console.debug(excerpt)
+  return excerpt.trim()
 }
 
 module.exports = (config) => {

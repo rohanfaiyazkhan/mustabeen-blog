@@ -2,7 +2,6 @@
 layout: blog-post.njk
 title: This Is a Test Post
 date: 2021-04-22
-tags: ['posts', 'research']
 permalink: '/posts/{{ page.fileSlug }}/index.html'
 ---
 
