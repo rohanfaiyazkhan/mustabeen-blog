@@ -1,22 +1,27 @@
-:root {
-  --nav-breakdown: 768px;
-}
-
-nav > ul {
+nav {
   display: flex;
   align-items: center;
-  list-style: none;
-  margin: 0;
+  justify-content: space-between;
   padding: 0 1rem;
 }
 
-@media (min-width: var(--nav-breakdown)) {
-  nav > ul {
-    padding: 1rem 2rem;
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+nav ul.nav-desktop {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  nav {
+    padding: 1.5rem 3rem;
   }
 }
 
-nav > ul a {
+nav a {
   display: inline-block;
   padding: 1rem;
 }
@@ -50,13 +55,13 @@ nav > ul a {
 }
 
 .nav-mobile {
-  display: block;
+  display: initial;
   font-family: var(--font-heading);
 }
 
-@media (min-width: var(--nav-breakdown)) {
+@media (min-width: 768px) {
   .nav-desktop {
-    display: block;
+    display: initial;
   }
 
   .nav-mobile {
@@ -99,11 +104,8 @@ nav > ul a {
   display: inline-block;
   border: 0;
   color: var(--primary-light);
-  text-transform: none;
-  text-indent: 0px;
   text-align: center;
   align-items: flex-start;
-  cursor: default;
   box-sizing: border-box;
   margin: 0em;
   font-family: var(--font-heading);
