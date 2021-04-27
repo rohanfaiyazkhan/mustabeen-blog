@@ -64,6 +64,7 @@ module.exports = (config) => {
 
   config.addPassthroughCopy('styles')
   config.addPassthroughCopy('img')
+  config.addPassthroughCopy('video')
 
   config.addShortcode('excerpt', (article) => extractExcerpt(article))
   config.setBrowserSyncConfig({

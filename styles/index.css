@@ -231,3 +231,10 @@ footer p {
 footer a {
   color: var(--gray-300);
 }
+
+video {
+  display: block;
+  margin: 20px auto;
+  overflow: hidden;
+  width: 100%;
+}
