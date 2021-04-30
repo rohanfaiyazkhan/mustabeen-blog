@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/prism-base16-monokai.dark.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
@@ -16,6 +14,14 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="alternate icon" href="/favicon.ico">
     <title>{{ title or metadata.title }}</title>
+
+    {% set css %}
+    {% include "../styles/index.css" %}
+    {% include "../styles/prism-base16-monokai.dark.css" %}
+    {% endset %}
+    <style>
+      {{css | cssmin | safe}}
+    </style>
 
     {% if share_img %}
       <meta property="og:image" content="{{share_img}}">
