@@ -12,11 +12,19 @@
     <section class="container blog-post">
         <header>
             {% if header_img and header_img_alt %}
-                <picture>
-                    <img src="{{header_img}}" alt="{{header_img_alt}}"/>
-                </picture>
+                <figure>
+                    <picture>
+                        <img src="{{header_img}}" alt="{{header_img_alt}}"/>
+                    </picture>
+                    {% if header_img_caption %}
+                        <figcaption>{{header_img_caption | safe }}</figcaption>
+                    {% endif %}
+                </figure>
             {% endif %}
             <h1>{{title}}</h1>
+            {% if subtitle %}
+                <p class="subtitle">{{subtitle}}</p>
+            {% endif %}
             <p>{{ author or metadata.author.name }}<br/>{{ date | readableDate }}</p>
             {% include "components/tagslist/tagslist.njk" %}
         </header>

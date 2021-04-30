@@ -26,6 +26,17 @@
   height: var(--size);
 }
 
+.blog-post > header .subtitle {
+  line-height: 1;
+  font-size: 1.25em;
+}
+
+.blog-post > header figcaption {
+  font-style: italic;
+  font-size: 0.85em;
+  margin-top: 0.3em;
+}
+
 @media (min-width: 1024px) {
   .blog-post {
     display: grid;

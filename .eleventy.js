@@ -6,11 +6,8 @@ const { DateTime } = require('luxon')
 const CleanCSS = require('clean-css')
 const { minify } = require('terser')
 const markdownEmoji = require('markdown-it-emoji')
+const markdownFootnotes = require('markdown-it-footnote')
 
-/**
- *
- * @param {string} excerpt
- */
 String.prototype.stripSurroundingParagraphTag = function () {
   let output = this
   if (this.startsWith('<p>')) {
@@ -165,6 +162,7 @@ module.exports = (config) => {
       level: 2,
     })
     .use(markdownEmoji)
+    .use(markdownFootnotes)
   config.setLibrary('md', markdownLibrary)
 
   return {
