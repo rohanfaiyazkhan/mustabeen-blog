@@ -2,6 +2,7 @@
 title: 'How to Make an Accesible Auto Suggest with vanilla Javascript'
 author: 'Rohan Faiyaz Khan'
 share_img: '/img/google-search.png'
+share_desc: 'Autosuggest component is comprised of an input where a user can type, and a dropdown menu with suggestions that the user can select. I discuss how to create such a component in an accessible manner.'
 header_img: '/img/google-search.png'
 header_img_alt: 'picture of google search'
 layout: 'blog'
@@ -52,7 +53,7 @@ Note that you could perhaps use a library to implement this and that could work 
 
 Using the [official WAI-ARIA guidelines as reference](https://www.w3.org/TR/wai-aria-practices/#combobox), we can identify some features that our component needs to have to ensure it is accessible. Ignoring some optional cases or ones that are not applicable to our use case, we can list the requirements as follows.
 
-**1. Aria roles, states and properties**
+#### 1. Aria roles, states and properties
 
 - The container needs to have `role="combobox"`
 - The input field inside the combobox needs to have `role="textbox"`
@@ -63,7 +64,7 @@ Using the [official WAI-ARIA guidelines as reference](https://www.w3.org/TR/wai-
 - When a suggested value is visually indicated as the currently selected value, the option containing that value has `aria-selected` set to true.
 - If the combobox has a visible label, the element with role combobox has `aria-labelledby` set to a value that refers to the labelling element.
 
-**2. Keyboard interaction**
+#### 2. Keyboard interaction
 
 - When focus is on the textbox:
 

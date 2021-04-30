@@ -29,6 +29,12 @@
       <meta property="og:image:width" content="200">
       <meta property="og:image:height" content="200">
     {% endif %}
+    {% if share_title %}
+      <meta property="og:title" content="{{share_title}}">
+    {% endif %}
+    {% if share_desc %}
+      <meta property="og:description" content="{{share_desc}}">
+    {% endif %}
 
     {% block head %}{% endblock %}
   </head>
