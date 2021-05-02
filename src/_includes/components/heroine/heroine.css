@@ -12,7 +12,7 @@
 
 .heroine img {
   clip-path: url(#clip-path);
-  --size: 342px;
+  --size: min(90vw, 342px);
   width: var(--size);
   height: var(--size);
   object-fit: cover;

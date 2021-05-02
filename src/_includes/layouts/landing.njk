@@ -3,6 +3,8 @@
 {% block body %}
   {% set css %}
   {% include "components/heroine/heroine.css" %}
+  {% include "components/postslist/postslist.css" %}
+  {% include "components/tagslist/tagslist.css" %}
   {% endset %}
   <style>
     {{css | cssmin | safe}}
@@ -25,7 +27,7 @@
         </h3>
         {% set postslist = collections.research | head(-3) %}
         {% include "components/postslist/postslist.njk" %}
-        <a href="/research">View all academic articles</a>
+        <a href="/research" class="view-all">View all academic articles</a>
       </div>
       <div class="tech-posts">
         {% set maxPosts = collections.tech.length | min(3) %}
@@ -33,7 +35,7 @@
         </h3>
         {% set postslist = collections.tech | head(-3) %}
         {% include "components/postslist/postslist.njk" %}
-        <a href="/tech">View all development articles</a>
+        <a href="/tech" class="view-all">View all development articles</a>
       </div>
     </section>
   </main>

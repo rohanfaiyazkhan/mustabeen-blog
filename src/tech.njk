@@ -4,6 +4,15 @@ layout: base
 eleventyNavigation:
   key: 'Web Dev'
 ---
+
+{% set css %}
+{% include "components/postslist/postslist.css" %}
+{% include "components/tagslist/tagslist.css" %}
+{% endset %}
+<style>
+  {{css | cssmin | safe}}
+</style>
+
 <main class="small container">
   <h1>View all web development articles
     </h1>

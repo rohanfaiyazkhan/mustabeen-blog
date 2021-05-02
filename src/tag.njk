@@ -14,6 +14,14 @@ permalink: /tags/{{ tag | slug }}/
 layout: base
 ---
 
+{% set css %}
+{% include "components/postslist/postslist.css" %}
+{% include "components/tagslist/tagslist.css" %}
+{% endset %}
+<style>
+  {{css | cssmin | safe}}
+</style>
+
 <main class="container small">
   <h1>Tagged “{{ tag }}”</h1>
 

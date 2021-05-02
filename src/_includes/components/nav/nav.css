@@ -1,18 +1,15 @@
 nav {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  width: 100%;
 }
 
 nav ul {
   list-style: none;
   margin: 0;
-}
-
-nav ul.nav-desktop {
-  display: flex;
-  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -56,12 +53,12 @@ nav a {
 
 .nav-mobile {
   display: initial;
-  font-family: var(--font-heading);
 }
 
 @media (min-width: 768px) {
   .nav-desktop {
-    display: initial;
+    display: flex;
+    align-items: center;
   }
 
   .nav-mobile {

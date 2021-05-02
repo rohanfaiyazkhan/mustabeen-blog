@@ -1,19 +1,15 @@
-{% set css %}
-{% include "./postslist.css" %}
-{% include "../tagslist/tagslist.css" %}
-{% endset %}
-<style>
-    {{css | cssmin | safe}}
-</style>
-
 <ul class="postlist">
     {% for post in postslist | reverse %}
         <li>
-            <a href={{post.url | url}}>{{post.data.title}}</a>
-            <p class="post-date">Written on {{post.date | readableDate}}</p>
-            {% set tags = post.data.tags %}
-            {% include "components/tagslist/tagslist.njk" %}
-            <p class="post-excerpt">"{% excerpt post %}"</p>
+            <article>
+                <h3 class="post-heading">
+                    <a href={{post.url | url}}>{{post.data.title}}</a>
+                </h3>
+                <p class="post-date">Written on {{post.date | readableDate}}</p>
+                {% set tags = post.data.tags %}
+                {% include "components/tagslist/tagslist.njk" %}
+                <p class="post-excerpt">"{% excerpt post %}"</p>
+            </article>
         </li>
     {% endfor %}
 </ul>

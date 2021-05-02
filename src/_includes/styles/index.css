@@ -15,19 +15,24 @@
   --text-focus: hsla(330, 100%, 88%, 1);
 }
 
+html {
+  width: 100vw;
+}
+
 body {
   background: var(--primary-dark);
   font-family: var(--font-sans);
   color: var(--gray-300);
   font-size: 18px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: 100vw;
+  box-sizing: border-box;
   margin: 0;
 }
 
 body > main {
   flex-grow: 1;
+  box-sizing: border-box;
 }
 
 .font-heading {
@@ -35,12 +40,24 @@ body > main {
 }
 
 .container {
-  --p-x: 2rem;
+  --p-x: 1rem;
   --p-y: 0.25rem;
   --max-w: 1024px;
   max-width: var(--max-w);
   padding: var(--p-y) var(--p-x);
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    --p-x: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    --p-x: 0;
+  }
 }
 
 .container.small {
@@ -237,4 +254,12 @@ video {
   margin: 20px auto;
   overflow: hidden;
   width: 100%;
+}
+
+.view-all {
+  display: inline-block;
+  margin-left: 0.25em;
+  margin-bottom: 0.5em;
+  font-size: 12px;
+  font-style: italic;
 }

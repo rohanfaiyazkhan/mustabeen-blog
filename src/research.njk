@@ -4,6 +4,13 @@ layout: base
 eleventyNavigation:
   key: 'Research'
 ---
+{% set css %}
+{% include "components/postslist/postslist.css" %}
+{% include "components/tagslist/tagslist.css" %}
+{% endset %}
+<style>
+  {{css | cssmin | safe}}
+</style>
 
 <main class="container small">
   <h1>View all academic articles

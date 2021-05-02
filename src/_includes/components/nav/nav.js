@@ -24,7 +24,6 @@ function openDropDown(element) {
 
 function closeDropDown(element) {
   element.classList.remove('visible')
-  element.classList.add('false')
   element.setAttribute('aria-expanded', 'false')
 }
 

@@ -1,12 +1,24 @@
+.postlist {
+  padding-left: 0.25em;
+  list-style: none;
+}
+
+.post-heading {
+  display: inline-block;
+  margin-top: 0.4em;
+  margin-bottom: 0;
+}
+
 .post-excerpt {
   font-style: italic;
   font-size: 0.8em;
+  margin-top: 0;
 }
 
 .post-date {
   font-family: var(--font-heading);
   font-size: 0.7em;
   display: inline-block;
-  margin-left: 0.5em;
+  margin: 0.1em 0;
   color: var(--gray-300);
 }
