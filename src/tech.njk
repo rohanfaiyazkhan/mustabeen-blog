@@ -16,6 +16,6 @@ eleventyNavigation:
 <main class="small container">
   <h1>View all web development articles
     </h1>
-  {% set postslist = collections.tech | head(-3) %}
+  {% set postslist = collections.tech %}
   {% include "components/postslist/postslist.njk" %}
 </main>
