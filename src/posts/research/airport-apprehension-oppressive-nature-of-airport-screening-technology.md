@@ -7,6 +7,10 @@ header_img_caption: Photo by <a href="https://unsplash.com/@schluditsch?utm_sour
 header_img_alt: 'picture of airport passport sign'
 share_img: '/img/airport.jpg'
 share_desc: In this paper I will analyze biometric systems at use in the airport, their colonial origins and the biases they operate on. Despite widespread trust by governments and airport authorities on these systems, I attempt to show the impact of these systems to perpetrate feelings of anxiety and stuckedness on racialized travellers.
+tags:
+  - 'AI'
+  - 'AI Bias'
+  - 'Postcolonial Theory'
 ---
 
 In the late 1970s British immigration laws mandated that an engaged woman coming to Britain within three months to marry her fiance did not require a visa for entry. However, if an immigration officer suspected a woman was married, but only pretending to be engaged to gain entry, they could take her for further examination in a “virginity test”. This degrading and humiliating procedure was conducted on the stereotypical assumption that South Asian women would be “submissive, weak and tradition bound” and sometimes even targeted women who had proper paperwork. [^1]
