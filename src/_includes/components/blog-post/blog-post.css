@@ -37,6 +37,11 @@
   margin-top: 0.3em;
 }
 
+.blog-post img {
+  box-shadow: -10px 10px 8px rgba(60, 60, 60, 0.4),
+    -4px 4px 2px rgba(60, 60, 60, 0.6);
+}
+
 @media (min-width: 1024px) {
   .blog-post {
     display: grid;

@@ -101,6 +101,10 @@ module.exports = (config) => {
     return array.slice(0, n)
   })
 
+  config.addFilter('published', (posts) => {
+    return posts.filter((post) => !post.data.draft)
+  })
+
   // Return the smallest number argument
   config.addFilter('min', (...numbers) => {
     return Math.min(...numbers)

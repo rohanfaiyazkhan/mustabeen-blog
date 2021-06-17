@@ -22,18 +22,18 @@
     </section>
     <section class="home-posts">
       <div class="research-posts">
-        {% set maxPosts = collections.research.length | min(3) %}
+        {% set maxPosts = collections.research | published | length | min(3) %}
         <h3>Latest {% if maxPosts == 1 %}research article{% else %}{{maxPosts}} research articles{% endif %}
         </h3>
-        {% set postslist = collections.research | head(-3) %}
+        {% set postslist = collections.research | published | head(-3) %}
         {% include "components/postslist/postslist.njk" %}
         <a href="/research" class="view-all">View all academic articles</a>
       </div>
       <div class="tech-posts">
-        {% set maxPosts = collections.tech.length | min(3) %}
+        {% set maxPosts = collections.tech | published | length | min(3) %}
         <h3>Latest {% if maxPosts == 1 %}tech article{% else %}{{maxPosts}} tech articles{% endif %}
         </h3>
-        {% set postslist = collections.tech | head(-3) %}
+        {% set postslist = collections.tech | published | head(-3) %}
         {% include "components/postslist/postslist.njk" %}
         <a href="/tech" class="view-all">View all development articles</a>
       </div>

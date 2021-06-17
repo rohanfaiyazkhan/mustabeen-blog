@@ -16,6 +16,6 @@ eleventyNavigation:
 <main class="small container">
   <h1>View all technical articles
     </h1>
-  {% set postslist = collections.tech %}
+  {% set postslist = collections.tech | published %}
   {% include "components/postslist/postslist.njk" %}
 </main>
