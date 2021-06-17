@@ -52,7 +52,7 @@ function extractExcerpt(article) {
   })
 
   // console.debug(excerpt)
-  return excerpt.trim()
+  return excerpt?.trim?.() ?? ''
 }
 
 module.exports = (config) => {
@@ -102,7 +102,11 @@ module.exports = (config) => {
   })
 
   config.addFilter('published', (posts) => {
-    return posts.filter((post) => !post.data.draft)
+    if (process.env.ELEVENTY_ENV !== 'development') {
+      return posts.filter((post) => !post.data.draft)
+    } else {
+      return posts
+    }
   })
 
   // Return the smallest number argument
