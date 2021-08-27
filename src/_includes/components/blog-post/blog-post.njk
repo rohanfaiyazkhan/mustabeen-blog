@@ -27,7 +27,9 @@
             {% endif %}
             <p>{{ author or metadata.author.name }}<br/>{{ date | readableDate }}</p>
             {% include "components/tagslist/tagslist.njk" %}
-            <a href="#">This article was originally posted on Dhaka Tribune</a>
+            {% if originally_posted_on %}
+                <a href="{% originally_posted_on.link %}">This article was originally posted on {% originally_posted_on.text %}</a>
+            {% endif %}
         </header>
         <main class="blog-content">
             {{content | safe}}
