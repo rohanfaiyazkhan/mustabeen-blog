@@ -1,10 +1,9 @@
 ---
-title: Tech Articles by Rohan Faiyaz Khan
+title: Research Articles by Qazi Mustabeen Noor
 layout: base
 eleventyNavigation:
-  key: 'Tech'
+  key: 'Fiction'
 ---
-
 {% set css %}
 {% include "components/postslist/postslist.css" %}
 {% include "components/tagslist/tagslist.css" %}
@@ -13,9 +12,9 @@ eleventyNavigation:
   {{css | cssmin | safe}}
 </style>
 
-<main class="small container">
-  <h1>View all technical articles
+<main class="container small">
+  <h1>View all fiction articles
     </h1>
-  {% set postslist = collections.tech | published %}
+  {% set postslist = collections.fiction | published %}
   {% include "components/postslist/postslist.njk" %}
 </main>

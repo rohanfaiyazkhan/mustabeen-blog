@@ -1,6 +1,6 @@
 ---
 title: Deploying a Fast AI model to Azure Functions
-author: Rohan Faiyaz Khan
+author: Qazi Mustabeen Noor
 draft: true
 tags: ['machine learning', 'fast ai']
 date: 2021-06-16

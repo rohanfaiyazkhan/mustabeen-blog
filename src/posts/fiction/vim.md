@@ -1,7 +1,7 @@
 ---
 title: 'Efficiency in the Editor : How I overcame my fear of Vim'
 date: 2019-08-29T17:53:54+06:00
-author: Rohan Faiyaz Khan
+author: Qazi Mustabeen Noor
 tags: [vim, beginners, productivity]
 share_img: '/img/vim.jpg'
 ---

@@ -1,9 +1,10 @@
 ---
-title: Research Articles by Qazi Mustabeen Noor
+title: Non-Fiction Articles by Qazi Mustabeen Noor
 layout: base
 eleventyNavigation:
-  key: 'Research'
+  key: 'Non-Fiction'
 ---
+
 {% set css %}
 {% include "components/postslist/postslist.css" %}
 {% include "components/tagslist/tagslist.css" %}
@@ -12,9 +13,9 @@ eleventyNavigation:
   {{css | cssmin | safe}}
 </style>
 
-<main class="container small">
-  <h1>View all academic articles
+<main class="small container">
+  <h1>View all non-fiction articles
     </h1>
-  {% set postslist = collections.research | published %}
+  {% set postslist = collections.nonfiction | published %}
   {% include "components/postslist/postslist.njk" %}
 </main>

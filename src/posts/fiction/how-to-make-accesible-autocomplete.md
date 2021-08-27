@@ -1,6 +1,6 @@
 ---
 title: 'How to Make an Accesible Auto Suggest with vanilla Javascript'
-author: 'Rohan Faiyaz Khan'
+author: 'Qazi Mustabeen Noor'
 share_img: '/img/google-search.png'
 share_desc: 'Autosuggest component is comprised of an input where a user can type, and a dropdown menu with suggestions that the user can select. I discuss how to create such a component in an accessible manner.'
 header_img: '/img/google-search.png'

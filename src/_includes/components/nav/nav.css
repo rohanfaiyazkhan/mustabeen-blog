@@ -28,17 +28,20 @@ nav a {
   font-family: var(--font-heading);
   display: inline-flex;
   align-items: center;
-}
-
-.nav-home > a {
   color: var(--secondary-dark);
   transition: color 0.25s linear;
   display: flex;
   align-items: center;
 }
 
-.nav-home > a:hover {
+.nav-home:hover {
   color: var(--secondary-light);
+}
+
+.nav-home span:last-child {
+  color: var(--primary-light);
+  margin-bottom: 0.25em;
+  font-size: 0.8em;
 }
 
 .nav-item-active > a {

@@ -1,7 +1,7 @@
 :root {
   --primary-default: hsla(330, 72%, 55%, 1);
-  --primary-dark: #a81887;
-  --primary-light: hsla(330, 53%, 73%, 1);
+  --primary-dark: hsla(244, 40%, 48%, 1);
+  --primary-light: hsla(244, 53%, 83%, 1);
   --secondary-dark: hsla(53, 70%, 76%, 1);
   --secondary-default: #f0a61d;
   --secondary-light: hsla(53, 70%, 76%, 1);
@@ -72,6 +72,10 @@ body > main {
   border-bottom: 1px solid var(--primary-light);
 }
 
+.fiction-posts {
+  border-bottom: 1px solid var(--primary-light);
+}
+
 @media (min-width: 768px) {
   .home-posts {
     display: grid;
@@ -81,11 +85,10 @@ body > main {
   .research-posts {
     margin-top: 2rem;
     padding-right: 2rem;
-    border-bottom: none;
     border-right: 1px solid var(--primary-light);
   }
 
-  .tech-posts {
+  .fiction-posts {
     margin-top: 2rem;
     padding-left: 2rem;
   }
@@ -124,12 +127,6 @@ small.pronouns {
 
 .social-icon:hover {
   color: var(--primary-light);
-}
-
-@media (min-width: 1024px) {
-  .social-icon-container {
-    justify-content: flex-start;
-  }
 }
 
 pre,

@@ -2,7 +2,7 @@
 title: 'Turning your React Component into a Finite State Machine With useReducer'
 date: 2020-01-25T23:38:01+06:00
 draft: false
-author: 'Rohan Faiyaz Khan'
+author: 'Qazi Mustabeen Noor'
 header_img: '/img/steps.jpg'
 header_img_alt: 'photo of staircase'
 header_img-caption: Photo by <a href="https://unsplash.com/@smingot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Stéphane Mingot</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

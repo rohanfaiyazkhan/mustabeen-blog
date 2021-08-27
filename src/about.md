@@ -1,5 +1,5 @@
 ---
-title: About Me | Rohan Faiyaz Khan
+title: About Me | Qazi Mustabeen Noor
 layout: about
 eleventyNavigation:
   key: 'About'
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 # About me
 
-Hi, my name is Rohan. :wave: My pronouns are _they / them_.
+Hi, my name is Mustabeen. :wave: My pronouns are _they / them_.
 
 I am a Bangladeshi Frontend Web Developer. I love web technology and learning new things. and I wish to help create an accessible web for everyone.
 
